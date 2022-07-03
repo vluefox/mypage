@@ -9,11 +9,22 @@
     <meta property="og:image" content="착한장보기_노랑.jpg">
     <script type="text/javascript" src="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/free/sparta.js"></script>
     <title>장보기 - 프로필 링크</title>
+    <script>
+        (function(d) {
+          var config = {
+            kitId: 'jjf4ufq',
+            scriptTimeout: 3000,
+            async: true
+          },
+          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+      </script>
     <style>
-        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
-* {
-    font-family: "Pretendard",serif;
-}
+        *{
+            font-family: "santorini-210",sans-serif;
+            font-weight: 100;
+            font-style: normal;
+        }
         body {
             background: linear-gradient(
                 to top,
@@ -65,14 +76,22 @@
             width: 300px;
             height: 50px;
 
-            background-color: white;
+            border-radius: 120px;
+            -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+            box-shadow: inset 0 1px 40px 0 rgba(227, 222, 255, 0.2), 
+                        inset 0 4px 18px 0 rgba(154, 146, 210, 0.3), 
+                        inset 0 98px 100px -48px rgba(202, 172, 255, 0.3), 
+                        inset 0 -82px 68px -64px rgba(96, 68, 144, 0.3), 
+                        inset 0 7px 11px -4px #fff, 
+                        inset 0 39px 56px -36px rgba(255, 255, 255, 0.5);
+            background-color: rgba(255, 255, 255, 0.1);
             border-radius: 8px;
 
             margin-bottom: 10px;
 
-            font-size: 14px;
-            font-weight: bold;
-            color: #272727;
+            font-size: 16px;
+            color: #fefefe;
 
             display: flex;
             flex-direction: column;
@@ -82,10 +101,48 @@
             text-decoration: none;
 
             box-shadow: 3px 3px 3px 0px black;
+
+            letter-spacing: 10px;
         }
         .wrap > a:hover {
-            background-color: #fefefe;
-            font-size: 20px;
+            background: white;
+            font-weight: bold;
+        }
+        .wrap .fruit:hover {
+            font-size: 22px;
+            color: #282626;
+            background: linear-gradient(to right,#F09819,#EDDE5D);
+            box-shadow: 0 1px 10px 0 #edde5d;
+        }
+        .wrap .vegetable:hover {
+            font-size: 22px;
+            color: #282626;
+            background: linear-gradient(to right,#799F0C,#FFE000);
+            box-shadow: 0 1px 10px 0 #FFE000;
+        }
+        .wrap .meat:hover {
+            font-size: 22px;
+            color: #282626;
+            background: linear-gradient(to right,#EB3349,#F45C43);
+            box-shadow: 0 1px 10px 0 #F45C43;
+        }
+        .wrap .seafood:hover {
+            font-size: 22px;
+            color: #282626;
+            background: linear-gradient(to right,#2980B9,#6DD5FA);
+            box-shadow: 0 1px 10px 0 #6DD5FA;
+        }
+        .wrap .dairyproduct:hover {
+            font-size: 22px;
+            color: #282626;
+            background: linear-gradient(to right,#f0bda2,#fdf3e5);
+            box-shadow: 0 1px 10px 0 #fdf3e5;
+        }
+        .wrap .frozenproducts:hover {
+            font-size: 22px;
+            color: #282626;
+            background: linear-gradient(to right,#7EE8FA,#EEC0C6);
+            box-shadow: 0 1px 10px 0 #EEC0C6;
         }
     </style>
 </head>
@@ -94,12 +151,12 @@
         <div class="profile"></div>
         <h1 class="main">장보기</h1>
         <p class="sub">어떤 재료를 찾을까요?</p>
-        <a target="_blank" href="https://spartacodingclub.kr/">과일</a>
-        <a target="_blank" href="https://hanghae99.spartacodingclub.kr/">야채</a>
-        <a target="_blank" href="https://chang.spartacodingclub.kr/">육류</a>
-        <a target="_blank" href="https://ddingdong.spartacodingclub.kr/">해산물</a>
-        <a target="_blank" href="https://ddingdong.spartacodingclub.kr/">유제품</a>
-        <a target="_blank" href="https://ddingdong.spartacodingclub.kr/">냉동제품</a>
+        <a class="fruit" target="_blank" href="https://spartacodingclub.kr/">과일</a>
+        <a class="vegetable" target="_blank" href="https://hanghae99.spartacodingclub.kr/">야채</a>
+        <a class="meat" target="_blank" href="https://chang.spartacodingclub.kr/">육류</a>
+        <a class="seafood" target="_blank" href="https://ddingdong.spartacodingclub.kr/">해산물</a>
+        <a class="dairyproduct" target="_blank" href="https://ddingdong.spartacodingclub.kr/">유제품</a>
+        <a class="frozenproducts" target="_blank" href="https://ddingdong.spartacodingclub.kr/">냉동제품</a>
 </div>
 </body>
 </html>
